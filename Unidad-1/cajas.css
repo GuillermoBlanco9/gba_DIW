@@ -1,0 +1,24 @@
+*{
+	margin 0px 10px 0px 10px;
+}
+
+h1{
+	padding: 0.5em;
+	margin 1em 0px 1em 0px;
+	border: 2px solid blue;
+}
+
+h2{
+	padding-left: 0.5em;
+	margin 0.75em 0px 0.75em 0px;
+	border: 2px solid grey;
+}
+
+ul{
+	border: 2px solid green;
+}
+
+li{
+	margin: 1em;
+	border: 2px;
+}
