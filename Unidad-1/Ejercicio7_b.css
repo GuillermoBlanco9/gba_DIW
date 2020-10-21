@@ -1,0 +1,20 @@
+body
+{
+    background-image: url("madrid.jpg");
+    background-attachment: fixed;  
+    background-position: center;
+    background-repeat: no-repeat;
+}
+div
+{
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
+    box-shadow: 10px 10px 2px #000000;
+}
+div.clara
+{
+    background-image: url("logo.png");
+    width: 300px;
+    height: 300px;
+}
