@@ -33,3 +33,38 @@
     height: 6em;
     font-size: 1em; 
 }
+#contenedor1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 300px;
+    width: 30%;
+    align-content: space-between;
+    flex-wrap: wrap-reverse; 
+    margin-bottom: 1em;
+}
+
+
+.contenedor2
+{
+        background-color: blue;
+        
+          margin: 0;
+}
+
+
+
+.contenedor2 > div
+{
+    background-color: rgb(106, 189, 228);
+    width: 6em;
+    color: white;
+    border: white 1px solid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    font-size: 1em; 
+}
