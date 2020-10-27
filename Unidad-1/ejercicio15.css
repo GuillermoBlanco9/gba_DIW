@@ -1,0 +1,28 @@
+.contenedor
+{
+    position: absolute;
+    background: linear-gradient(to bottom, #589b00 68%,#9ecb2d 94%);
+    border-radius: 1.5em;
+    width: 90%;
+    height: 15%;
+    top: 0%;
+    left: 1%;
+}
+.menu
+{
+    padding: 0;
+    float: left;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    margin: 0px 20px 10px 0px;
+    
+}
+
+
+.menu li
+{
+display: inline;
+background: linear-gradient(to right, #b7df2d 0%,#97f731 1%,#b7df2d 1%,#f8ffe8 32%,#f8ffe8 32%,#f8ffe8 57%,#f8ffe8 70%,#f8ffe8 70%,#b7df2d 100%,#b7df2d 100%,#bbf400 100%);
+}
+
