@@ -1,0 +1,71 @@
+div#flex1
+{
+    align-items: flex-end;
+    
+ justify-content: space-around;
+}
+div#flex1 > div:nth-child(3)    
+{
+    
+    align-self: flex-start;
+ 
+}
+div#flex2
+{
+    align-items: flex-start;
+ justify-content: space-around;
+}
+div#flex2 > div:nth-child(3)
+{
+    
+    align-self: center;
+ 
+}
+div#flex3
+{
+    align-items: center;
+    justify-content: space-around;
+}
+div#flex3 > div:first-child
+{ 
+    height: 2.5em;
+    line-height: 2.5em;
+}
+div#flex3 > div:nth-child(2)
+{ 
+    height: 2em;
+    line-height: 2em;
+}
+
+div#flex3 > div:nth-child(4)
+{ 
+    height: 4em;
+    line-height: 4em;
+}
+div#flex3 > div:last-child
+{ 
+    height: 1em;
+    line-height: 1em;
+}
+
+
+
+
+.division   
+{
+    display: flex;
+    height: 5em;
+    width: 60%;
+    background-color: grey;
+    border: 0.2em solid aquamarine;
+    color: white;
+}
+
+.division > div
+{
+height:3em;
+width: 8em;
+line-height: 3em;
+text-align: center;
+background-color: orangered;
+}
