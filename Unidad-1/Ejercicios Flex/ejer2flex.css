@@ -1,0 +1,30 @@
+#contenedor
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 300px;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+
+.contenedor1
+{
+        background-color: aqua;
+        
+          margin: 0;
+}
+
+
+
+.contenedor1 > div
+{
+    background-color: tomato;
+    width: 9rem;
+    color: white;
+    text-align: center;
+    line-height: 3em;
+    font-size: 0.7em; 
+}
