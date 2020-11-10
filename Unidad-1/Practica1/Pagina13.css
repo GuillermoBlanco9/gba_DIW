@@ -40,18 +40,14 @@
     div#flex-menu > div:first-child
     {
         align-items: center;
-        
         padding: 0.6em;
         height: 64px;
         color: grey;
         background: url(lupa-blanca.png);
-        background-clip: padding-box;
         background-repeat: no-repeat;
         background-position: right;
         background-size: 30px;
         background-color: rgb(41, 41, 41);
-        
-
     }
 
     #flex-menu > div > p
@@ -168,7 +164,7 @@
         background-size: 30px;
         width: 30px;
         height: 30px;
-        margin-left: 1em;
+        margin: 5px;
     }
 
     .cabecera
