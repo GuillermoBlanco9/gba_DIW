@@ -29,7 +29,8 @@ div {
 @media all and (min-width: 768px) and (min-height: 380px)
 {
     .element {
-        width:  calc(50% - 1em); 
+        width:  calc(50% - 1em);
+        color: blue;
     }
 }
 
@@ -37,7 +38,8 @@ div {
 {
     .element
     {
-     width:  calc(33.3% - 1em);  
+     width:  calc(33.3% - 1em); 
+     color: green; 
     }
 }
 
@@ -46,5 +48,6 @@ div {
     .element
     {
     width:  calc(16.6% - 1em); 
+    color: red;
     }
 }
