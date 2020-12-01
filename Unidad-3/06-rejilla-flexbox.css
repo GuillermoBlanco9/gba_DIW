@@ -1,0 +1,61 @@
+div {
+    box-sizing: border-box;
+}
+.row {
+    border: 10px solid black;
+    padding: 0.5em;
+    margin: 0.5em;
+    text-align: center;
+}
+.element {
+    border: 10px solid green;
+    padding: 0.5em;
+    margin: 0.5em;
+    width: calc(100% - 1em); /* Hay padding y margin lateral de 0.5em, por tanto restamos ambos (1em) para que quede el diseño cuadrado */
+}
+.image {
+    border: 10px solid blue;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+.text {
+    border: 10px solid red;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+@media all and (min-width: 768px) and (min-height: 380px)
+{
+    .row {
+        display: grid;
+        border: 10px solid black;
+        padding: 0.5em;
+        margin: 0.5em;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 1024px) and (min-height: 460px)
+{
+    .row {
+        display: grid;
+        border: 10px solid black;
+        padding: 0.5em;
+        margin: 0.5em;
+        text-align: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 1200px) and (min-height: 520px)
+{
+    .row {
+        display: grid;
+        border: 10px solid black;
+        padding: 0.5em;
+        margin: 0.5em;
+        text-align: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
