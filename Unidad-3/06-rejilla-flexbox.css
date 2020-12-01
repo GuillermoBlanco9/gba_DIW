@@ -6,6 +6,8 @@ div {
     padding: 0.5em;
     margin: 0.5em;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .element {
     border: 10px solid green;
@@ -26,36 +28,23 @@ div {
 
 @media all and (min-width: 768px) and (min-height: 380px)
 {
-    .row {
-        display: grid;
-        border: 10px solid black;
-        padding: 0.5em;
-        margin: 0.5em;
-        text-align: center;
-        grid-template-columns: 1fr 1fr;
+    .element {
+        width:  calc(50% - 1em); 
     }
 }
 
 @media all and (min-width: 1024px) and (min-height: 460px)
 {
-    .row {
-        display: grid;
-        border: 10px solid black;
-        padding: 0.5em;
-        margin: 0.5em;
-        text-align: center;
-        grid-template-columns: 1fr 1fr 1fr;
+    .element
+    {
+     width:  calc(33.3% - 1em);  
     }
 }
 
 @media all and (min-width: 1200px) and (min-height: 520px)
 {
-    .row {
-        display: grid;
-        border: 10px solid black;
-        padding: 0.5em;
-        margin: 0.5em;
-        text-align: center;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    .element
+    {
+    width:  calc(16.6% - 1em); 
     }
 }
