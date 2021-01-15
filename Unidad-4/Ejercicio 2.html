@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var myVar;
+        var numero=1;
+		function myTimer() {
+            console.log(numero)
+            if(numero<0)
+            {
+                clearInterval(myVar)
+            }
+            if(numero==0)
+            {
+                parar();
+                document.getElementById("segs").style.color='red';
+            }		  
+            document.getElementById("segs").innerHTML = numero;
+            numero=numero-1;          
+		}		
+		function empezar(){
+            numero=document.getElementById('campo').value;
+            
+            if(numero>0)
+            {
+                myVar = setInterval(myTimer, 1000);
+                document.getElementById("segs").style.color='black';
+            }
+            
+		}
+		function parar() {
+           clearInterval(myVar);
+		}
+		document.addEventListener("DOMContentLoaded", empezar);
+	</script>
+</head>
+<body>
+    <p id="num">Numero de segundos</p><textarea id="campo"></textarea>
+	<p id="segs"></p>
+	<button onclick="empezar()">Start</button>
+	<button onclick="parar()">Stop</button>
+</body>
+</html>
