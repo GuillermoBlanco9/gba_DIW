@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Ejemplo de animación con colisiones</title>
+	
+	<link rel="stylesheet" href="Ejercicio 6.css">
+</head>
+<script>
+
+function inicio()
+{
+	
+}
+
+function derecha()
+{
+	var valor=parseFloat(document.getElementById('mov').value);
+	var caja=document.getElementById('block');
+	var posCaja=caja.getBoundingClientRect();
+	caja.style.left = posCaja.x + valor+'px';
+	enrojecer(caja.getBoundingClientRect());
+} 
+
+function izquierda()
+{
+	var valor=parseFloat(document.getElementById('mov').value);
+	var caja=document.getElementById('block');
+	var posCaja=caja.getBoundingClientRect();
+	caja.style.left = posCaja.x - valor+'px';
+	enrojecer(caja.getBoundingClientRect());
+}
+
+function abajo()
+{
+	var valor=parseFloat(document.getElementById('mov').value);
+	var caja=document.getElementById('block');
+	var posCaja=caja.getBoundingClientRect();
+	caja.style.top = posCaja.top + valor+'px';
+	enrojecer(caja.getBoundingClientRect());
+}
+
+function arriba()
+{
+	var valor=parseFloat(document.getElementById('mov').value);
+	var caja=document.getElementById('block');
+	var posCaja=caja.getBoundingClientRect();
+	caja.style.top = posCaja.top - valor+'px';
+	enrojecer(caja.getBoundingClientRect());
+}
+
+function enrojecer(posicion)
+{
+
+	var final=document.getElementById('final');
+	var posFinal=final.getBoundingClientRect();
+	console.log(posFinal);
+	console.log(posicion);
+	if(posFinal.x < posicion.x &&
+	 (posFinal.x + posFinal.width) > (posicion.x + posicion.width) &&
+	 (posFinal.y + posFinal.height) > (posicion.y + posicion.height) &&
+	 posFinal.y < posicion.y)
+	{
+		document.getElementById('block').style.backgroundColor='red';
+	}
+	else
+	{
+		document.getElementById('block').style.backgroundColor='greenyellow';
+	}
+
+}
+
+
+
+
+
+window.onload=inicio;
+</script>
+<body>
+	<div id="container">
+		<button id="left" onclick="izquierda()">&laquo;</button> 
+		<button id="right" onclick="derecha()">&raquo;</button>
+		<button id="top"  onclick="arriba()">&laquo;</button> 
+		<button id="bottom"  onclick="abajo()">&laquo;</button>
+		<input type="number" value="50" id="mov"></input>
+		<div class="block" id="block"><span id="texto">Pincha aquí también<span></div>
+		<div class="cuadrado" id="final"></div>
+	</div>
+</body>
+</html>
