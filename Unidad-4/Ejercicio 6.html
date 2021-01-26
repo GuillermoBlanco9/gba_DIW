@@ -8,9 +8,22 @@
 </head>
 <script>
 
-function inicio()
-{
-	
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var caja = document.getElementById(data);
+    var nuevaCaja = ev.target.appendChild(caja);
+    nuevaCaja.style.top = ev.clientY + "px";
+    nuevaCaja.style.left = ev.clientX + "px";
+	enrojecer(nuevaCaja.getBoundingClientRect())
 }
 
 function derecha()
@@ -70,20 +83,15 @@ function enrojecer(posicion)
 
 }
 
-
-
-
-
-window.onload=inicio;
 </script>
 <body>
-	<div id="container">
+	<div id="container" ondrop="drop(event)" ondragover="allowDrop(event)">
 		<button id="left" onclick="izquierda()">&laquo;</button> 
 		<button id="right" onclick="derecha()">&raquo;</button>
 		<button id="top"  onclick="arriba()">&laquo;</button> 
 		<button id="bottom"  onclick="abajo()">&laquo;</button>
 		<input type="number" value="50" id="mov"></input>
-		<div class="block" id="block"><span id="texto">Pincha aquí también<span></div>
+		<div class="block" id="block" draggable="true" ondragstart="drag(event)"><span id="texto">Pincha aquí también<span></div>
 		<div class="cuadrado" id="final"></div>
 	</div>
 </body>
