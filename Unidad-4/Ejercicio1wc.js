@@ -12,7 +12,7 @@ class wcBlink extends HTMLElement {
 		setInterval(() => {
         var testE = document.querySelector("wc-blink");
         testE.style.color= ++n % 2 ? this.alternativeColor : this.baseColor;
-        },this.changeInterval*1000);
+		},this.changeInterval*1000);
     }
 
 	get baseColor() {
