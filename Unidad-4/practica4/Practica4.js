@@ -18,7 +18,7 @@ function empezar()
     comprobar=setInterval(colision,5);
     crear=setInterval(bichos,700,1,3);
     star=setInterval(estrella,15000);
-    setTimeout(dificultad,5000);
+    setInterval(dificultad,5000);
     tiempo=setInterval(() => {
       puntuacion++;
       document.getElementById('temporizador').innerHTML=puntuacion;
@@ -68,7 +68,7 @@ function avanzar(bicho)
     var x=bicho.getBoundingClientRect();
     bicho.style.left=(x.x - 15 )+'px';
     
-  },10)
+  },1)
 }
 
 function colision()
@@ -141,8 +141,9 @@ function derrota()
 function dificultad()
 {
   clearInterval(crear);
-  crear=setInterval(bichos,800,1,2);
-  crear1=setInterval(bichos,800,2,3);
+  clearInterval(crear1);
+  crear=setInterval(bichos,700,1,2);
+  crear1=setInterval(bichos,700,2,3);
 }
 
 class barraProgreso extends HTMLElement{
