@@ -9,13 +9,15 @@ var bichote=[];
 var puntuacion=0;
 var vic=4;
 var start = null;
+var star;
+var inter;
 
 function empezar()
 {
     
     comprobar=setInterval(colision,5);
     crear=setInterval(bichos,700,1,3);
-    setTimeout(victoria,7000);
+    star=setInterval(estrella,15000);
     setTimeout(dificultad,5000);
     tiempo=setInterval(() => {
       puntuacion++;
@@ -64,9 +66,9 @@ function avanzar(bicho)
 {
   var hola=setInterval(function () {
     var x=bicho.getBoundingClientRect();
-    bicho.style.left=(x.x - 200 )+'px';
+    bicho.style.left=(x.x - 15 )+'px';
     
-  },100)
+  },10)
 }
 
 function colision()
@@ -97,25 +99,27 @@ function aleatorio(a,b) {
 function victoria()
 {
   
-  var prueba=document.createElement('victoria-div');
-  document.getElementById('2').appendChild(prueba);
   
-  /*
   
-  */
-/*
   var elem=document.getElementById('juego')
   var punt=document.getElementById('temporizador').innerText
   while (elem.firstChild) {
     elem.removeChild(elem.firstChild);
   }
-  */
+  
   clearInterval(crear);
   clearInterval(crear1);
   clearInterval(tiempo);
-  //elem.innerHTML='VICTORIA<br>puntuacion:'+punt;
+  clearInterval(star);
+  
+  elem.innerHTML='<p color=#ee3e18>VICTORIA</p><br>puntuación:'+punt;
   
 }
+
+function estrella()
+{var prueba=document.createElement('victoria-div');
+document.getElementById('2').appendChild(prueba);}
+
 
 function derrota()
 {
@@ -127,7 +131,10 @@ function derrota()
     clearInterval(crear);
     clearInterval(crear1);
     clearInterval(tiempo);
-    elem.innerHTML='DERROTA :(<br>puntuacion:'+punt;
+    clearInterval(star);
+    clearInterval(inter);
+    elem.innerHTML='DERROTA :(<br>puntuación:'+punt;
+    document.getElementById('juego').style.backgroundColor="#7b94a5";
 
 }
 
@@ -176,7 +183,7 @@ class barraProgreso extends HTMLElement{
   instrucciones()
   {
     if(this._leer.innerHTML!='') this._leer.innerHTML='';
-    else this._leer.innerHTML='<b>W</b> para moverte hacia arriba. <br><b>S</b> para moverte hacia abajo.<br><br>Esquiva los misiles para ganar.';
+    else this._leer.innerHTML='<b>W</b> para moverte hacia arriba. <br><b>S</b> para moverte hacia abajo.<br><br>Recoje la estrella para ganar.';
     
   }
 
@@ -199,7 +206,7 @@ class barraProgreso extends HTMLElement{
         {
           margin: 2em 1em 2em 0.5em;
           text-decoration: none;
-          padding: 40px;
+          padding: 30px;
           font-weight: 600;
           font-size: 25px;
           color: #ffffff;
@@ -211,7 +218,7 @@ class barraProgreso extends HTMLElement{
         {
           margin: 2em 1em 2em 1em;
           text-decoration: none;
-          padding: 40px;
+          padding: 30px;
           font-weight: 600;
           font-size: 25px;
           color: #ffffff;
@@ -252,32 +259,35 @@ customElements.define('progress-bar', barraProgreso);
 
 class VictoriaDiv extends HTMLElement{
 
+  
   constructor() {
     super();
     this.attachShadow({mode: 'open'});		
   }
 
+  
   connectedCallback() {
     this.shadowRoot.innerHTML = this.template;  
     this._vict = this.shadowRoot.querySelector("#estrella");
-    
-    
-    
+    this.mover(this._vict);
+  }
 
+  mover(a)
+  {
+    inter=setInterval(function () {
 
-    var hola=setInterval(function () {
-      //var posi=document.getElementById('pers').getBoundingClientRect();
-      var x=document.getElementById('estrella').getBoundingClientRect();
-      this._vict.style.left=(x.x - 200 )+'px';
-      /*
+      var posi=document.getElementById('pers').getBoundingClientRect();
+      var x=a.getBoundingClientRect();
+      a.style.left=(x.x - 200 )+'px';
+      
+      
       if(x.x>=posi.left && x.x <=(posi.right -20)&& x.y==posi.y)
       {
-        derrota();
+        victoria();
+        clearInterval(inter)
       }
-      */
+      
     },100)
-    
-
 
   }
 
