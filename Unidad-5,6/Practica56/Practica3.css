@@ -1,0 +1,405 @@
+body{
+    margin: 0;
+    font-size: 15px;
+    
+}
+
+
+
+@font-face {
+    font-family: 'Bavro Regular';
+    src: local('Bavro Regular'), local('Bavro-Regular'), url('Bavro-Regular.otf');
+    }
+
+.container {
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 10vh 5vh 80vh 5vh;
+    grid-template-areas:"header header header header header header "
+                        "nav nav nav nav nav nav"
+						" main main main main main main"
+                        "footer footer footer footer footer footer ";
+    
+}
+
+.item {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container > header {
+    grid-area: header;
+    font-size: 5em;
+    text-shadow: 2px 2px #333;
+    font-weight: bolder;
+    font-family: 'Bavro regular';
+    background-image: radial-gradient(circle at -14.09% 20.12%, #94ffa9 0, #7ff7ae 10%, #69edb1 20%, #53e1b1 30%, #3cd2af 40%, #27c1aa 50%, #12b0a3 60%, #00a19d 70%, #009597 80%, #008a92 90%, #00818d 100%);
+}
+
+
+
+
+.container > nav {
+    grid-area: nav;
+}
+
+.container > main {
+    grid-area: main;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    background-color: #E5FFFB;
+}
+
+.main-div
+{
+    display: flex;
+    flex-direction: column;
+    margin:1em;
+    height: 90%;
+}
+
+.main-div >div
+{
+    margin:1em;
+    height: 50%;
+}
+
+
+.main-div2
+{
+    
+    display: grid;
+    flex-direction: column;
+    margin:1em;
+    height: 100%;
+}
+
+.main-div2 > div
+{
+    text-align: center;
+    
+}
+
+
+.oferta
+{
+    text-shadow: 2px 2px #333;
+    font-weight: bolder;
+    font-size: 4em;
+    color: #2EBC3B;
+    font-family: 'Bavro regular';
+}
+
+.oferta2
+{
+    text-shadow: 2px 2px #333;
+    font-weight: bolder;
+    font-size: 3em;
+    color: #77F4AF;
+    font-family: 'Bavro regular';
+}
+.links
+{
+    font-size: 2em;
+    font-weight: bolder;
+    color: black;
+    font-family: 'Bavro regular';
+}
+
+.parrafos
+{
+    font-size: 1em;
+    font-family: monospace;
+}
+
+.container > aside {
+    grid-area: aside;
+    display: none;
+    background-color: grey;
+}
+
+.container > footer {
+    grid-area: footer;
+    box-shadow: 1px 1px 15px;
+    background-image: radial-gradient(circle at -14.09% 20.12%, #94ffa9 0, #7ff7ae 10%, #69edb1 20%, #53e1b1 30%, #3cd2af 40%, #27c1aa 50%, #12b0a3 60%, #00a19d 70%, #009597 80%, #008a92 90%, #00818d 100%);
+
+}
+
+
+#button {
+    background-image: radial-gradient(circle at -14.09% 20.12%, #94ffa9 0, #7ff7ae 10%, #69edb1 20%, #53e1b1 30%, #3cd2af 40%, #27c1aa 50%, #12b0a3 60%, #00a19d 70%, #009597 80%, #008a92 90%, #00818d 100%);
+    padding: 0;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 1px 1px 15px;
+    
+    }
+   #button div {
+    height: 3em;
+    flex-grow: 1;
+    transition:  all 1s ease-in-out;
+    }
+    #button div:last-child {
+        height: 3em;
+        flex-grow: 1;
+       
+
+        }
+
+    #button div a {
+        font-family: Arial;
+        font-size: 2em;
+        height: 3em;
+        color: #CCFFFF;
+        text-decoration: none;
+        float: left;
+        padding: 10px;
+        transition:all 1s ease-in-out;
+        
+        }
+        #button div:hover {
+            
+            font-size: 1.5em;
+            height: 75px;
+            }
+            #button div a:hover {
+                
+                color: black;
+                }
+            
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+.banner
+{
+    background-image: url('banner.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100px 90px;
+    margin-top: -10px;
+    text-shadow: 2px 2px #333;
+    font-weight: bolder;
+    font-family: 'Bavro regular';
+}
+
+.audio1
+   {
+       width: 2em;
+       height: 2em;
+       background-image: url('playpause.png');
+       background-repeat: no-repeat;
+       background-size: 2em;
+       margin-left: 2em;
+   }
+
+.video
+{
+    
+}
+
+@media all and (max-width: 900px) {
+    
+    body
+    {
+        font-size: 12px;
+    }
+
+    .container > nav {
+        display: none;
+    }
+
+
+    .container > header {
+        
+        font-size: 4em;
+        box-shadow: 1px 1px 15px;
+         }
+
+
+        .container > main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: none;
+            height: 100%;
+        }
+
+       .main-div > div:first-child
+       {
+           height: 80%;
+       }
+       .main-div > div:nth-child(2)
+       {
+           height: 20%;
+       }
+
+       .tarjeta
+       {
+           background-position: center;
+           background-size: 250px 200px;
+       }
+        
+
+        
+        .main-div2
+        {
+            height: 60%;
+        }
+       
+
+        .container > aside {
+            grid-area: aside;
+            display: flex;
+            text-align: left;
+            
+        }
+
+
+    #button
+    {
+        flex-direction: column;
+        height: 100%;
+        background-image: none;
+        box-shadow: none;
+        align-items: flex-start;
+        font-size: 2em;
+    }
+    #button div a {
+       font-size: 1em;
+        
+        }
+
+    .container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 10vh 85vh 5vh;
+        grid-template-areas:"header header header header header header "
+                            " main main main main main aside"
+                            "footer footer footer footer footer footer ";
+        
+    }
+    
+    .item {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .oferta
+    {
+        font-size: 3em;
+    }
+
+    .oferta2
+    { 
+        font-size: 2em;
+    }
+
+    .main-div2 {
+        overflow: scroll;
+        height: 100%;
+        
+    }
+
+    .links
+    {
+        font-size: 2em;
+    }
+
+    .banner{
+        display: none;
+    }
+
+       
+      #button div:hover {
+        
+     background: rgb(230,255,248);
+background: radial-gradient(circle, rgba(230,255,248,1) 0%, rgba(128,128,128,1) 17%, rgba(128,128,128,1) 23%);
+       
+        font-size: 1.2em;
+        height: 80px;
+        }
+        #button div a:hover {
+            color: black;
+            }
+  }
+
+  
+
+
+  @media all and (max-width: 460px) {
+    
+    body
+    {
+        font-size: 10px;
+    }
+    
+
+    .container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 10vh 85vh 5vh;
+        grid-template-areas:"header header header header header nav "
+                            " main main main main main main"
+                            "footer footer footer footer footer footer ";
+        
+    }
+    
+    
+    .container > header {
+        
+        font-size: 2.5em;
+        box-shadow: 1px 1px 15px;
+         }
+
+    .item {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+   .container > nav
+   {
+    background-image: url('icono.png');
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: initial;
+   }
+
+   
+    
+    #button
+    {
+       display: none;
+    }
+    #button:hover
+    {
+       
+    }
+
+    .container > aside {
+        display: none;
+    }
+
+  }
