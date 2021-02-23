@@ -18,7 +18,9 @@
 
 <body>
     <div class="container">
+        
 		<header class="item item--header">
+            
             <picture>
                     <source
                     media="(min-width: 600px)"
@@ -29,6 +31,7 @@
                     <img src="logo1.png">
             </picture>
             avro Bank
+            
         </header>
 		<nav class="item item--nav">
             <div id="button">
@@ -37,7 +40,7 @@
                 <div><a href="#">Hipotecas y prestamos</a></div>
                 <div><a href="#">Seguros</a></div>
                 <div><a href="#">Contacto</a></div>
-                <div><a href="#">Hazte cliente - Log in</a></div>
+                <div><a href="#">Log in</a></div>
                 
             </div>
         </nav>
@@ -63,10 +66,12 @@
                     <div><a class='links' href="#">Saber mas</a></div>-->
                     <!--<div class="banner"></div>-->
                     <div class="oferta2">Hazte cliente</div>
-                    <div class='video'><video src="video.mp4" loop='true' controls width="200" height="100"></video><div class="parrafos">
+                    <div class="cliente">
+                    <div class='video'><video src="video.mp4" loop='true' controls width="200" height="100"></video></div><div class="parrafos">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pulvinar eu libero a accumsan.
                         Vestibulum mattis velit erat,
-                    </div></div>
+                    </div>
+                    </div>
                     <!--<div><a class='links' href="#">Saber mas</a></div>-->
                 </div>
             
@@ -86,10 +91,11 @@
 		<footer class="item item--footer">
             <a class='links' href="#">Pongase en contacto</a>
             <div class="audio1" onclick="silenciar()">
-                <audio id="audio" autoplay muted='true'>
-                    <source src="musica.ogg" type="audio/ogg">
+                <audio id="audio" autoplay muted>
                     <source src="musica.mp3" type="audio/mp3">
-                  </audio> 
+                    <source src="musica.ogg" type="audio/ogg">
+                        Audio not suported
+                </audio> 
             </div>
             <p>Unmute</p>
         </footer>
