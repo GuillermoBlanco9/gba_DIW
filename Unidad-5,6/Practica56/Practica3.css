@@ -167,12 +167,12 @@ body {
 #button div a {
     font-family: Arial;
     font-size: 2em;
-    height: 3em;
+    height: 1em;
     color: #CCFFFF;
     text-decoration: none;
     float: left;
     padding: 10px;
-    transition: all 1s ease-in-out;
+    
 
 }
 
@@ -203,18 +203,44 @@ body {
     width: 60%;
     filter: saturate(0.6);
     filter: hue-rotate(45deg);
-    animation-duration: 2s;
+    animation-duration: 10s;
+    opacity: 0.25;
     animation-name: animFoto;
+    animation-iteration-count: infinite;
 }
 
 @keyframes animFoto {
-    from {
-      width: 0%;
-      filter: hue-rotate(75deg);
+    25%
+    {
+        width: 60%;
+        filter: hue-rotate(45deg);
+        transform: rotate(-2deg);
+        top: 0;
+        left: 0;
+        opacity: 0.25;
     }
-    to {
-      width: 60%;
-      filter: hue-rotate(45deg);
+    50%
+    {
+        width: 57%;
+        filter: hue-rotate(55deg);
+        transform: rotate(3deg);
+        opacity: 0.5;
+    }
+    75%
+    {
+        width: 60%;
+        filter: hue-rotate(65deg);
+        transform: rotate(-5deg);
+        opacity: 0.75;
+    }
+    100%
+    {
+        width: 60%;
+        filter: hue-rotate(45deg);
+        transform: rotate(-360deg);
+        top: 0;
+        left: 100;
+        opacity: 0.25;
     }
   }
 
@@ -361,7 +387,6 @@ body {
 
         background: rgb(230, 255, 248);
         background: radial-gradient(circle, rgba(230, 255, 248, 1) 0%, rgba(128, 128, 128, 1) 17%, rgba(128, 128, 128, 1) 23%);
-
         font-size: 1.2em;
         height: 80px;
     }
