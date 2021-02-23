@@ -215,8 +215,7 @@ body {
         width: 60%;
         filter: hue-rotate(45deg);
         transform: rotate(-2deg);
-        top: 0;
-        left: 0;
+        left: -5px;
         opacity: 0.25;
     }
     50%
@@ -224,6 +223,7 @@ body {
         width: 57%;
         filter: hue-rotate(55deg);
         transform: rotate(3deg);
+        left: 5px;
         opacity: 0.5;
     }
     75%
@@ -231,6 +231,7 @@ body {
         width: 60%;
         filter: hue-rotate(65deg);
         transform: rotate(-5deg);
+        left: -5px;
         opacity: 0.75;
     }
     100%
@@ -238,8 +239,7 @@ body {
         width: 60%;
         filter: hue-rotate(45deg);
         transform: rotate(-360deg);
-        top: 0;
-        left: 100;
+        left: 5px;
         opacity: 0.25;
     }
   }
